@@ -1,0 +1,139 @@
+/* chat.css */
+
+/* Styling for the chat box container */
+.chat-box {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 320px;   /* Adequate width for chat box */
+  height: 450px;  /* Custom height to fit comfortably */
+  background-color: #4f4c4c;  /* Light background for contrast */
+  border: 2px solid #1a1a1a;  /* Match the primary site border color */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Soft shadow for depth */
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;  /* Keep it on top */
+}
+
+/* Chat box header with the close button */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a1a1a;  /* Primary dark color from your website */
+  color: #ffffff;  /* White text for contrast */
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: 'Roboto', sans-serif;  /* Match your site's font */
+}
+
+/* Close chat button */
+.close-chat-button {
+  background: none;
+  color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.close-chat-button:hover {
+  color: #00ff77;
+}
+
+/* Chat content styling (the chat messages section) */
+.chat-content {
+  flex-grow: 1;  /* Allow it to expand as messages come in */
+  padding: 10px;
+  overflow-y: auto;  /* Enable scrolling for long chats */
+  background-color: #f9f9f9;  /* Soft background for chat content */
+  color: #333;  /* Dark text for readability */
+  font-family: 'Roboto', sans-serif;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Style for the user's message */
+.user-message {
+  background-color: #00bfa5;  /* Teal background for user's message */
+  color: #ffffff;  /* White text for readability */
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 8px 0;
+  max-width: 75%;
+  align-self: flex-end;  /* Align user's message to the right */
+}
+
+/* Style for the bot's message */
+.bot-message {
+  background-color: #f0f0f0;  /* Light gray for bot's message */
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 8px 0;
+  max-width: 75%;
+  align-self: flex-start;  /* Align bot's message to the left */
+}
+
+/* Input section at the bottom of the chat box */
+.chat-input-section {
+  display: flex;
+  padding: 10px;
+  background-color: #1a1a1a;  /* Same dark background */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* The input field for typing messages */
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;  /* Soft background for input */
+  border: 1px solid #e0e0e0;
+}
+
+/* Send button for the chat */
+.chat-send-button {
+  background-color: #00bfa5;  /* Accent color (teal or something close) */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chat-send-button:hover {
+  background-color: #009688;  /* Slightly darker on hover */
+}
+
+/* Close chat button */
+.close-chat-button {
+  background: none;
+  color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.close-chat-button:hover {
+  color: #3bffa3;  /* Red hover effect for closing */
+}
+
+
+/* Make sure it's responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .chat-box {
+    width: 90%;
+    height: 400px;
+    right: 5%;
+  }
+}
